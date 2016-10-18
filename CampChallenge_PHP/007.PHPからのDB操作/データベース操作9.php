@@ -33,7 +33,6 @@ $age = $_POST["age"];
 if(isset($name) || isset($age)){
   $stmt = $db->query("insert into users (name,age) values('$name','$age')");
  echo "登録が完了しました。";
- $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
  $db = null;
 }
 
